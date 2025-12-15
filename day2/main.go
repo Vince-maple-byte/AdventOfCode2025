@@ -36,26 +36,28 @@ func solution(input string) int {
 
 func repeating(check int) bool {
 
-	
-	// checkAsAString := strconv.Itoa(check);
-	// s := checkAsAString + checkAsAString;
-	// r := s[1:len(s)-1];
+	//Part 2 Solution
+	checkAsAString := strconv.Itoa(check);
+	s := checkAsAString + checkAsAString;
+	r := s[1:len(s)-1];
 
-	// return strings.Contains(r, checkAsAString);
-	if strings.Index(strconv.Itoa(check), "0") == 0 {
-		return true;
-	}
+	return strings.Contains(r, checkAsAString);
 
-	if len(strconv.Itoa(check)) % 2 != 0 {
-		return false;
-	}
+	//Part 1 Solution
+	// if strings.Index(strconv.Itoa(check), "0") == 0 {
+	// 	return true;
+	// }
 
-	s := strconv.Itoa(check);
+	// if len(strconv.Itoa(check)) % 2 != 0 {
+	// 	return false;
+	// }
 
-	lowerHalf := s[:len(s)/2];
-	higherHalf := s[len(s)/2:];
+	// s := strconv.Itoa(check);
 
-	return lowerHalf == higherHalf;
+	// lowerHalf := s[:len(s)/2];
+	// higherHalf := s[len(s)/2:];
+
+	// return lowerHalf == higherHalf;
 
 }
 
